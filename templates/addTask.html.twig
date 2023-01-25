@@ -1,0 +1,13 @@
+{%  extends "base.html.twig" %}
+
+{%  block body %}
+    <h1>Add a task</h1>
+
+    {{ form_start(form) }}
+        {{ form_row(form.name) }}
+        {{ form_row(form.description) }}
+        {{ form_row(form.enddate) }}
+        <button type="submit">Add</button>
+    {{ form_end(form) }}
+
+{%  endblock %}

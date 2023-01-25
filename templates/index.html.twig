@@ -1,0 +1,19 @@
+{%  extends "base.html.twig" %}
+
+{% block body %}
+    <a href="{{ path('app_task_add') }}">Add a new task</a>
+
+    <ul>
+    {% for task in tasks %}
+        <li>
+            {{ task.name }}
+            <a href="{{ path('app_task_update', {id: task.id}) }}">edit</a>
+            <form action="{{ url('app_task_remove', { id: task.id }) }}" method="post">
+                <input type="hidden" name="token" value="{{ csrf_token('delete-task'~task.id) }}"/>
+                <button class="btn-delete" type="submit">x</button>
+            </form>
+        </li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
