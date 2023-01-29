@@ -7,7 +7,9 @@
         {{ form_row(form.name) }}
         {{ form_row(form.description) }}
         {{ form_row(form.enddate) }}
-        <button type="submit">Add</button>
+            {{ form_row(form.status) }}
+        {{ form_row(form.image) }}
+    <button type="submit">Add</button>
     {{ form_end(form) }}
 
 {%  endblock %}

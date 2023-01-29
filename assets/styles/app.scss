@@ -1,0 +1,144 @@
+$dark: #252422;
+$white: #FFFCF2;
+$light-grey: #CCC5B9;
+$accent: #EB5E28;
+
+/*GENERAl*/
+body {
+    padding: 0;
+    margin: 0;
+    background-color: $white;
+    font-family: 'Raleway', sans-serif;
+}
+.container{
+    padding: 0 10%;
+    margin: 0px;
+}
+h1{
+    font-weight: bold;
+    margin-top: 0px;
+}
+a{
+    color: $accent;
+    text-decoration: none;
+}
+
+/*NAVBAR*/
+nav{
+    padding: 20px 0;
+    background-color: $dark;
+    img{
+        height:24px;
+    }
+    ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        li{
+            list-style: none;
+            color: $white;
+            a {
+                text-decoration: none;
+                color: $white;
+
+                &:hover {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}
+
+
+//NOTICE
+div.notice-section{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    .alert{
+        color: $white;
+        font-weight: bold;
+        border-radius: 10px;
+        width: max-content;
+        padding: 12px;
+        &.alert-danger{
+            background-color: #B0413E;
+        }
+        &.alert-success{
+            background-color: #3b82f6;
+        }
+    }
+}
+
+
+//FORM
+form{
+        display: flex;
+        flex-direction: column;
+    input, select, textarea{
+        width: 200px !important;
+        margin-bottom: 16px;
+        background-color: $light-grey;
+        border: 0;
+        font-size: 16px;
+        padding: 8px 12px;
+        width: fit-content;
+        border-radius: 12px;
+        color: $dark;
+    }
+    label{
+        font-weight: bold;
+        font-size:16px;
+        padding-bottom: 4px;
+        display: block;
+    }
+    button {
+        background-color: $accent;
+        border: 0;
+        width: fit-content;
+        padding: 8px 12px;
+        border-radius: 12px;
+        color: $white;
+        font-size: 16px;
+        font-weight: bold;
+        &:hover{
+            cursor: pointer;
+            background-color: #C34C1E;
+        }
+    }
+}
+
+//INDEX PAGE
+.task-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    margin: 48px 0;
+    a{
+        font-weight: bold;
+        height: fit-content;
+    }
+}
+.task-table{
+    width: 100%;
+    tr:first-of-type{
+        font-weight: bold;
+        padding-bottom: 16px;
+    }
+    tr{
+        td:first-of-type{
+            width: 120px;
+        }
+        .task-name{
+            font-size: 20px;
+        }
+        img{
+            max-width: 100px;
+        }
+        form{
+            display: inline-block;
+        }
+    }
+
+}
